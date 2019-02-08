@@ -1,0 +1,23 @@
+module.exports.run = (bot, message,args, Discord) => {
+let jargs = args.join (" ")
+let em - new Discord.richEmbed()
+.setTitle("Sending to the sexy Bot Developer")
+.setDescription(jargs)
+.setcolor("GREEN")
+
+let emb = new Discord.richEmbed()
+.setTitle("You got mail.")
+.setDescription("Your not a lonely person")
+.addField("Message:,jargs")
+.addfield("Sender:,message.author")
+.setcolor("GREEN")
+
+let error = new Discord.RichEmbed()
+.setTitle("Uh-Oh Youve Encounted an Error")
+.setDescription("Blame IsoYeti")
+.addField("Error:", "You need to send a message")
+
+
+message.channel.send({embed: emb)
+bot.users.get("513103852409716736").send({embed: emb})
+}
